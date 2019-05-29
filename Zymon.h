@@ -24,33 +24,33 @@ enum Types
 
 struct StatsBase
 {
-	unsigned int HP;
-	unsigned int Atk;
-	unsigned int Def;
-	unsigned int SpecialAtk;
-	unsigned int SpecialDef;
-	unsigned int Speed;
-	unsigned int Level;
+	int HP;
+	int Atk;
+	int Def;
+	int SpecialAtk;
+	int SpecialDef;
+	int Speed;
+	int Level;
 };
 
 struct EVs
 {
-	unsigned int HP;
-	unsigned int Atk;
-	unsigned int Def;
-	unsigned int SpecialAtk;
-	unsigned int SpecialDef;
-	unsigned int Speed;
+	int HP;
+	int Atk;
+	int Def;
+	int SpecialAtk;
+	int SpecialDef;
+	int Speed;
 };
 
 struct IVs
 {
-	unsigned int HP;
-	unsigned int Atk;
-	unsigned int Def;
-	unsigned int SpecialAtk;
-	unsigned int SpecialDef;
-	unsigned int Speed;
+	int HP;
+	int Atk;
+	int Def;
+	int SpecialAtk;
+	int SpecialDef;
+	int Speed;
 };
 
 class Zymon

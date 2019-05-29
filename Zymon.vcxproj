@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Context.h" />
+    <ClInclude Include="nlohmann\json.hpp" />
     <ClInclude Include="Renderers\Renderer.h" />
     <ClInclude Include="States\Basestate.h" />
     <ClInclude Include="States\Gamestate.h" />

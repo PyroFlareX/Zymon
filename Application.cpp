@@ -11,12 +11,18 @@ Application::Application()
 
 void Application::RunLoop()
 {
+	sf::Clock timer;
+	sf::Time dt;
+	float t = 0;
+	int frames = 0;
+
 	m_context.clear();
 	m_context.update();
 
     sf::RenderWindow* p_window = m_context.getContext();
     while(m_context.isOpen())
     {
+		dt = timer.restart();
         ///Main Loop, do cycle of Input, Update, Draw, Render & Swap Buffers, Handle Events
         m_context.clear();
         ///Input
@@ -32,6 +38,14 @@ void Application::RunLoop()
         m_context.update();
 
         /// Handle Window Events
+		t += timer.getElapsedTime().asSeconds();
+		frames++;
+		if (t >= 1)
+		{
+			std::cout << frames << " per sec\n";
+			t = 0;
+			frames = 0;
+		}
     }
 }
 
