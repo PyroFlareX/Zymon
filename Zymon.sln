@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zymon", "Zymon.vcxproj", "{9DBCD1E8-F741-4E2F-9DCC-83F61FEF66BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DBCD1E8-F741-4E2F-9DCC-83F61FEF66BF}.Debug|x64.ActiveCfg = Debug|x64
+		{9DBCD1E8-F741-4E2F-9DCC-83F61FEF66BF}.Debug|x64.Build.0 = Debug|x64
+		{9DBCD1E8-F741-4E2F-9DCC-83F61FEF66BF}.Debug|x86.ActiveCfg = Debug|Win32
+		{9DBCD1E8-F741-4E2F-9DCC-83F61FEF66BF}.Debug|x86.Build.0 = Debug|Win32
+		{9DBCD1E8-F741-4E2F-9DCC-83F61FEF66BF}.Release|x64.ActiveCfg = Release|x64
+		{9DBCD1E8-F741-4E2F-9DCC-83F61FEF66BF}.Release|x64.Build.0 = Release|x64
+		{9DBCD1E8-F741-4E2F-9DCC-83F61FEF66BF}.Release|x86.ActiveCfg = Release|Win32
+		{9DBCD1E8-F741-4E2F-9DCC-83F61FEF66BF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2F6BA5D-700D-4306-B8FA-53C5A88C5CBC}
+	EndGlobalSection
+EndGlobal
