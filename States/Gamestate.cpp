@@ -5,7 +5,10 @@
 GameState::GameState(Application& app)
 : Basestate(app)
 {
-    
+	sf::Texture tex;
+	tex.create(32, 32);
+	test.setTexture(tex);
+	test.setColor(sf::Color::Red);
 }
 
 GameState::~GameState()
@@ -21,17 +24,16 @@ void GameState::input(sf::RenderWindow* window)
     if(inputHandler.virtualInput.right)
     {
         std::cout << "Going Right!\n";
-        moveOffset.x += 5.0f;
+        moveOffset.x += 32.0f;
     }
     if(inputHandler.virtualInput.left)
     {
         std::cout << "Going Left!\n";
-        moveOffset.x -= 5.0f;
+        moveOffset.x -= 32.0f;
     }
     if(inputHandler.virtualInput.up)
     {
         std::cout << "Going Up!\n";
-        moveOffset.y -= 5.0f;
     }
     if(inputHandler.virtualInput.down)
     {
@@ -40,19 +42,18 @@ void GameState::input(sf::RenderWindow* window)
     if(inputHandler.virtualInput.forth)
     {
         std::cout << "Going Forward!\n";
+		moveOffset.y -= 32.0f;
     }
     if(inputHandler.virtualInput.backwards)
     {
         std::cout << "Going Back!\n";
+		moveOffset.y += 32.0f;
     }
 
-    //playRect.move(moveOffset);
+	test.move(moveOffset);
 }
 
 void GameState::update(Renderer* renderer)
 {
-	sf::CircleShape test;
-	test.setRadius(50);
-	test.setFillColor(sf::Color::Red);
 	renderer->addDraw(test);
 }

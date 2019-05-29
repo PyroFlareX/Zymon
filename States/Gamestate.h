@@ -24,6 +24,7 @@ protected:
 
 private:
     Input inputHandler;
+	sf::Sprite test;
     //World m_world;
     //sf::RectangleShape playRect;
 };

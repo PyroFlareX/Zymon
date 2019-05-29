@@ -5,17 +5,18 @@ Renderer::Renderer()
     //ctor
 }
 
-void Renderer::addDraw(sf::Drawable& drawable)
+void Renderer::addDraw(sf::Sprite& drawable)
 {
-	m_queue.push_back(&drawable);
+	m_queue.push_back(drawable);
 }
 
 void Renderer::render(sf::RenderWindow* window)
 {
-	for (sf::Drawable* item : m_queue)
+	for (auto& item : m_queue)
 	{
-		window->draw(*item);
+		window->draw(item);
 	}
+	m_queue.clear();
 }
 
 Renderer::~Renderer()

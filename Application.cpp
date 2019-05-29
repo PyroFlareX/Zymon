@@ -11,6 +11,9 @@ Application::Application()
 
 void Application::RunLoop()
 {
+	m_context.clear();
+	m_context.update();
+
     sf::RenderWindow* p_window = m_context.getContext();
     while(m_context.isOpen())
     {

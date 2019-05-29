@@ -9,14 +9,14 @@ class Renderer
     public:
         Renderer();
 
-		void addDraw(sf::Drawable& drawable);
+		void addDraw(sf::Sprite& drawable);
 		void render(sf::RenderWindow* window);
 
         ~Renderer();
     protected:
 
     private:
-		std::vector<sf::Drawable*> m_queue;
+		std::vector<sf::Sprite> m_queue;
 };
 
 #endif // RENDERER_H
