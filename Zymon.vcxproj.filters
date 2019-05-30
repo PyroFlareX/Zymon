@@ -15,69 +15,69 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp">
+    <ClCompile Include="src\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Context.cpp">
+    <ClCompile Include="src\Context.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Renderers\Renderer.cpp">
+    <ClCompile Include="src\Zymon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="States\Basestate.cpp">
+    <ClCompile Include="src\States\Basestate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="States\Gamestate.cpp">
+    <ClCompile Include="src\States\Gamestate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Util\FileUtil.cpp">
+    <ClCompile Include="src\Renderers\Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Util\Input.cpp">
+    <ClCompile Include="src\Util\FileUtil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="World\World.cpp">
+    <ClCompile Include="src\Util\Input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Zymon.cpp">
+    <ClCompile Include="src\World\World.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h">
+    <ClInclude Include="src\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Context.h">
+    <ClInclude Include="src\Context.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Renderers\Renderer.h">
+    <ClInclude Include="src\Zymon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="States\Basestate.h">
+    <ClInclude Include="src\nlohmann\json.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="States\Gamestate.h">
+    <ClInclude Include="src\States\Basestate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Util\FileUtil.h">
+    <ClInclude Include="src\States\Gamestate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Util\Input.h">
+    <ClInclude Include="src\Renderers\Renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Util\Random.h">
+    <ClInclude Include="src\Util\FileUtil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="World\World.h">
+    <ClInclude Include="src\Util\Input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Zymon.h">
+    <ClInclude Include="src\Util\Random.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="nlohmann\json.hpp">
+    <ClInclude Include="src\World\World.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

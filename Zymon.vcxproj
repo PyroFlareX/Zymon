@@ -18,6 +18,31 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Context.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Renderers\Renderer.cpp" />
+    <ClCompile Include="src\States\Basestate.cpp" />
+    <ClCompile Include="src\States\Gamestate.cpp" />
+    <ClCompile Include="src\Util\FileUtil.cpp" />
+    <ClCompile Include="src\Util\Input.cpp" />
+    <ClCompile Include="src\World\World.cpp" />
+    <ClCompile Include="src\Zymon.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\Context.h" />
+    <ClInclude Include="src\nlohmann\json.hpp" />
+    <ClInclude Include="src\Renderers\Renderer.h" />
+    <ClInclude Include="src\States\Basestate.h" />
+    <ClInclude Include="src\States\Gamestate.h" />
+    <ClInclude Include="src\Util\FileUtil.h" />
+    <ClInclude Include="src\Util\Input.h" />
+    <ClInclude Include="src\Util\Random.h" />
+    <ClInclude Include="src\World\World.h" />
+    <ClInclude Include="src\Zymon.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{9DBCD1E8-F741-4E2F-9DCC-83F61FEF66BF}</ProjectGuid>
@@ -123,31 +148,6 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Context.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Renderers\Renderer.cpp" />
-    <ClCompile Include="States\Basestate.cpp" />
-    <ClCompile Include="States\Gamestate.cpp" />
-    <ClCompile Include="Util\FileUtil.cpp" />
-    <ClCompile Include="Util\Input.cpp" />
-    <ClCompile Include="World\World.cpp" />
-    <ClCompile Include="Zymon.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Application.h" />
-    <ClInclude Include="Context.h" />
-    <ClInclude Include="nlohmann\json.hpp" />
-    <ClInclude Include="Renderers\Renderer.h" />
-    <ClInclude Include="States\Basestate.h" />
-    <ClInclude Include="States\Gamestate.h" />
-    <ClInclude Include="Util\FileUtil.h" />
-    <ClInclude Include="Util\Input.h" />
-    <ClInclude Include="Util\Random.h" />
-    <ClInclude Include="World\World.h" />
-    <ClInclude Include="Zymon.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
