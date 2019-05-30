@@ -1,47 +1,34 @@
 #include "Input.h"
 #include <iostream>
 
-void Input::getInput(sf::RenderWindow* window)
+Input::Inputs Input::getInput()
 {
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::X))
-    {
-        std::cout << "Test\n";
-    }
-    sf::Event inputEvent;
-    while(window->pollEvent(inputEvent))
-    {
-    if (inputEvent.type == sf::Event::KeyPressed)
-        {
-        if(inputEvent.key.code == sf::Keyboard::W)
-            virtualInput.forth = true;
-        if(inputEvent.key.code == sf::Keyboard::S)
-            virtualInput.backwards = true;
-        if(inputEvent.key.code == sf::Keyboard::Space)
-            virtualInput.up = true;
-        if(inputEvent.key.code == sf::Keyboard::A)
-            virtualInput.left = true;
-        if(inputEvent.key.code == sf::Keyboard::D)
-            virtualInput.right = true;
-        if(inputEvent.key.code == sf::Keyboard::LShift)
-            virtualInput.down = true;
-        if(inputEvent.key.code == sf::Keyboard::Escape)
-            window->close();
-        }
-    if(inputEvent.type == sf::Event::Closed)
-        {
-            window->close();
-        }
-    }
-    return;
-}
+	Input::Inputs input = { false, false, false, false, false, false };
 
-void Input::resetInput()
-{
-    virtualInput.up = false;
-    virtualInput.down = false;
-    virtualInput.left = false;
-    virtualInput.right = false;
-    virtualInput.backwards = false;
-    virtualInput.forth = false;
-    return;
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+	{
+		input.forth = true;
+	}
+	else
+	{
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+		{
+			input.backwards = true;
+		}
+		else
+		{
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+			{
+				input.left = true;
+			}
+			else
+			{
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+				{
+					input.right = true;
+				}
+			}
+		}
+	}
+	return input;
 }

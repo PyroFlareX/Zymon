@@ -12,6 +12,7 @@ class Context
         void clear();
         void update();
         void draw();
+		void close();
         void initAPI();
         bool isOpen();
 

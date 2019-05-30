@@ -34,6 +34,11 @@ void Context::draw()
 
 }
 
+void Context::close()
+{
+	context.close();
+}
+
 void Context::initAPI()
 {
 

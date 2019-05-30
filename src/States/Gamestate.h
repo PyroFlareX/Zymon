@@ -24,9 +24,9 @@ protected:
 
 private:
 	sf::Texture tex;
-    Input inputHandler;
 	sf::Sprite test;
 	World map;
+	sf::Vector2f moveOffset;
 };
 
 #endif // GAMESTATE_H

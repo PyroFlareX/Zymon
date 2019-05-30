@@ -46,6 +46,8 @@ void Application::RunLoop()
 			t = 0;
 			frames = 0;
 		}
+
+		handleEvents();
     }
 }
 
@@ -61,20 +63,27 @@ Basestate& Application::currentState()
 
 void Application::handleEvents()
 {
- /*   sf::Event e;
-    while(window.pollEvent(e))
+    sf::Event e;
+	sf::View v;
+    while(m_context.getContext()->pollEvent(e))
         {
         switch(e.type)
         {
         case sf::Event::Closed:
-            window.close();
+			m_context.close();
             break;
+
+		case sf::Event::Resized:
+			// update the view to the new size of the window
+			v = m_context.getContext()->getView();
+			v.setSize(e.size.width, e.size.height);
+			m_context.getContext()->setView(v);
 
         case sf::Event::KeyPressed:
             switch(e.key.code)
             {
                 case sf::Keyboard::Escape:
-                    window.close();
+					m_context.close();
                     break;
 
                 default:
@@ -86,5 +95,5 @@ void Application::handleEvents()
             break;
         }
     }
-*/
+
 }

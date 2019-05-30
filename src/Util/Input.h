@@ -3,23 +3,19 @@
 
 #include <SFML/Graphics.hpp>
 
-class Momentum
+namespace Input
 {
-    public:
-        bool up;
-        bool down;
-        bool left;
-        bool right;
-        bool backwards;
-        bool forth;
-};
+	struct Inputs
+	{
+		bool up;
+		bool down;
+		bool left;
+		bool right;
+		bool backwards;
+		bool forth;
+	};
 
-class Input
-{
-    public:
-        Momentum virtualInput;
-        void getInput(sf::RenderWindow* window);
-        void resetInput();
+        Inputs getInput();
 };
 
 #endif // INPUT_H
