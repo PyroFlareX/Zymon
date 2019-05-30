@@ -5,7 +5,7 @@
 GameState::GameState(Application& app)
 : Basestate(app)
 {
-	tex.loadFromFile("res/Textures/tileset.png", sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(48, 48)));
+	tex.loadFromFile("res/Textures/trainer.png", sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(48, 64)));
 	test.setTexture(tex);
 }
 
