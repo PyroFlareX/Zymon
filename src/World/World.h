@@ -1,15 +1,15 @@
 #ifndef WORLD_H
 #define WORLD_H
 
-#include <SFML/Graphics.hpp>
+#include "TileMap.h"
+#include <iostream>
 
 class World
 {
     public:
         World();
 
-        sf::RectangleShape level;
-        void update(sf::RenderWindow* window);
+		TileMap tilemap;
 
         ~World();
     protected:

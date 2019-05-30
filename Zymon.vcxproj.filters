@@ -80,5 +80,13 @@
     <ClInclude Include="src\World\World.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\World\TileMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Textures\tileset.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

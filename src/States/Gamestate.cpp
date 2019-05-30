@@ -5,10 +5,8 @@
 GameState::GameState(Application& app)
 : Basestate(app)
 {
-	sf::Texture tex;
-	tex.create(32, 32);
+	tex.loadFromFile("res/Textures/tileset.png", sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(48, 48)));
 	test.setTexture(tex);
-	test.setColor(sf::Color::Red);
 }
 
 GameState::~GameState()
@@ -55,5 +53,6 @@ void GameState::input(sf::RenderWindow* window)
 
 void GameState::update(Renderer* renderer)
 {
+	renderer->addDraw(map.tilemap);
 	renderer->addDraw(test);
 }

@@ -2,17 +2,25 @@
 
 World::World()
 {
-    level.setFillColor(sf::Color::Green);
-    level.setSize(sf::Vector2<float>(1200.0f, 200.0f));
-    level.setPosition(0.0f, 500.0f);
+	const int level[] =
+	{
+		0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+		0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0,
+		1, 1, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3,
+		0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+		0, 1, 1, 0, 3, 3, 3, 0, 0, 0, 1, 1, 1, 2, 0, 0,
+		0, 0, 1, 0, 3, 0, 2, 2, 0, 0, 1, 1, 1, 1, 2, 0,
+		2, 0, 1, 0, 3, 0, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1,
+		0, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1,
+	};
+
+	if (!tilemap.load("res/Textures/tileset.png", sf::Vector2u(16, 16), level, 16, 8))
+	{
+		std::cout << "In World File\n";
+	}
 }
 
 World::~World()
 {
     //dtor
-}
-
-void World::update(sf::RenderWindow* window)
-{
-    window->draw(level);
 }

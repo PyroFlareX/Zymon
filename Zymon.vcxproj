@@ -40,8 +40,12 @@
     <ClInclude Include="src\Util\FileUtil.h" />
     <ClInclude Include="src\Util\Input.h" />
     <ClInclude Include="src\Util\Random.h" />
+    <ClInclude Include="src\World\TileMap.h" />
     <ClInclude Include="src\World\World.h" />
     <ClInclude Include="src\Zymon.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Textures\tileset.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

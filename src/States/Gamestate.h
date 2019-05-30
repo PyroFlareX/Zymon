@@ -23,10 +23,10 @@ protected:
 
 
 private:
+	sf::Texture tex;
     Input inputHandler;
 	sf::Sprite test;
-    //World m_world;
-    //sf::RectangleShape playRect;
+	World map;
 };
 
 #endif // GAMESTATE_H
