@@ -4,6 +4,7 @@
 #include "Basestate.h"
 #include "../Application.h"
 #include "../World/World.h"
+#include "../Player.h"
 
 #include "../Util/Input.h"
 
@@ -23,9 +24,7 @@ protected:
 
 
 private:
-	sf::Texture tex;
-	sf::Image sheet;
-	sf::Sprite test;
+	Player m_player;
 	World map;
 	sf::Vector2f moveOffset;
 };

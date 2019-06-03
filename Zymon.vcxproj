@@ -22,6 +22,7 @@
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\Context.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Renderers\Renderer.cpp" />
     <ClCompile Include="src\States\Basestate.cpp" />
     <ClCompile Include="src\States\Gamestate.cpp" />
@@ -34,6 +35,7 @@
     <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\Context.h" />
     <ClInclude Include="src\nlohmann\json.hpp" />
+    <ClInclude Include="src\Player.h" />
     <ClInclude Include="src\Renderers\Renderer.h" />
     <ClInclude Include="src\States\Basestate.h" />
     <ClInclude Include="src\States\Gamestate.h" />
