@@ -20,7 +20,7 @@ public:
 			for (unsigned int j = 0; j < height; ++j)
 			{
 				// get the current tile number
-				int tileNumber = tiles[i - 2 + j * width];
+				int tileNumber = tiles[i + j * width];
 
 				// find its position in the tileset texture
 				int tu = tileNumber % (m_tileset.getSize().x / tileSize.x);

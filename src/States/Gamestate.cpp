@@ -8,6 +8,7 @@ GameState::GameState(Application& app)
 	sheet.loadFromFile("res/Textures/trainer.png");
 	tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(48, 64)));
 	test.setTexture(tex);
+	test.move(sf::Vector2f(4.0f, 0.0f));
 }
 
 GameState::~GameState()
