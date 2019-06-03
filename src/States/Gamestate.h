@@ -24,6 +24,7 @@ protected:
 
 private:
 	sf::Texture tex;
+	sf::Image sheet;
 	sf::Sprite test;
 	World map;
 	sf::Vector2f moveOffset;

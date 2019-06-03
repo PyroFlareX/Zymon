@@ -5,7 +5,8 @@
 GameState::GameState(Application& app)
 : Basestate(app)
 {
-	tex.loadFromFile("res/Textures/trainer.png", sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(48, 64)));
+	sheet.loadFromFile("res/Textures/trainer.png");
+	tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(48, 64)));
 	test.setTexture(tex);
 }
 
@@ -24,14 +25,14 @@ void GameState::input(sf::RenderWindow* window)
     {
         std::cout << "Going Right!\n";
         moveOffset.x += 48.0f;
-		tex.loadFromFile("res/Textures/trainer.png", sf::IntRect(sf::Vector2i(0, 128), sf::Vector2i(48, 64)));
+		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(0, 128), sf::Vector2i(48, 64)));
 		test.setTexture(tex);
     }
     if(input.left)
     {
         std::cout << "Going Left!\n";
         moveOffset.x -= 48.0f;
-		tex.loadFromFile("res/Textures/trainer.png", sf::IntRect(sf::Vector2i(0, 64), sf::Vector2i(48, 64)));
+		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(0, 64), sf::Vector2i(48, 64)));
 		test.setTexture(tex);
     }
     if(input.up)
@@ -46,14 +47,14 @@ void GameState::input(sf::RenderWindow* window)
     {
         std::cout << "Going Forward!\n";
 		moveOffset.y -= 48.0f;
-		tex.loadFromFile("res/Textures/trainer.png", sf::IntRect(sf::Vector2i(0, 192), sf::Vector2i(48, 64)));
+		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(0, 192), sf::Vector2i(48, 64)));
 		test.setTexture(tex);
     }
     if(input.backwards)
     {
         std::cout << "Going Back!\n";
 		moveOffset.y += 48.0f;
-		tex.loadFromFile("res/Textures/trainer.png", sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(48, 64)));
+		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(48, 64)));
 		test.setTexture(tex);
     }
 
