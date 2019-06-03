@@ -2,6 +2,9 @@
 
 World::World()
 {
+	//mapData = getJsonFile("res/Maps/Overworld.json");
+	//mapData["layers"].
+
 	int level[1850];
 
 	for (int i = 0; i < 1850; ++i)

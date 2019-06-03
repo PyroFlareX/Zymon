@@ -4,6 +4,8 @@
 #include "TileMap.h"
 #include <iostream>
 
+#include "../Util/FileUtil.h"
+
 class World
 {
     public:
@@ -15,6 +17,7 @@ class World
     protected:
 
     private:
+		nlohmann::json mapData;
 };
 
 #endif // WORLD_H
