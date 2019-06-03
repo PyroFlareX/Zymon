@@ -23,14 +23,14 @@ void GameState::input(sf::RenderWindow* window)
     if(input.right)
     {
         std::cout << "Going Right!\n";
-        moveOffset.x += 16.0f;
+        moveOffset.x += 48.0f;
 		tex.loadFromFile("res/Textures/trainer.png", sf::IntRect(sf::Vector2i(0, 128), sf::Vector2i(48, 64)));
 		test.setTexture(tex);
     }
     if(input.left)
     {
         std::cout << "Going Left!\n";
-        moveOffset.x -= 16.0f;
+        moveOffset.x -= 48.0f;
 		tex.loadFromFile("res/Textures/trainer.png", sf::IntRect(sf::Vector2i(0, 64), sf::Vector2i(48, 64)));
 		test.setTexture(tex);
     }
@@ -45,26 +45,27 @@ void GameState::input(sf::RenderWindow* window)
     if(input.forth)
     {
         std::cout << "Going Forward!\n";
-		moveOffset.y -= 16.0f;
+		moveOffset.y -= 48.0f;
 		tex.loadFromFile("res/Textures/trainer.png", sf::IntRect(sf::Vector2i(0, 192), sf::Vector2i(48, 64)));
 		test.setTexture(tex);
     }
     if(input.backwards)
     {
         std::cout << "Going Back!\n";
-		moveOffset.y += 16.0f;
+		moveOffset.y += 48.0f;
 		tex.loadFromFile("res/Textures/trainer.png", sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(48, 64)));
 		test.setTexture(tex);
     }
 
 	test.move(moveOffset);
 	sf::View view(window->getView());
-	view.setCenter(test.getPosition() - sf::Vector2f(0.0f , 16.0f));
+	view.setCenter(test.getPosition() + sf::Vector2f(0.0f , 48.0f));
 	window->setView(view);
 }
 
 void GameState::update(Renderer* renderer)
 {
+	std::cout << "Position of Player: " << test.getPosition().x / 48 << " " << test.getPosition().y / 48 << "\n";
 	renderer->addDraw(map.tilemap);
 	renderer->addDraw(test);
 }

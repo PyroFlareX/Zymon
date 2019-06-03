@@ -1,7 +1,6 @@
 #include "Zymon.h"
 
 #include "Util/Random.h"
-#include "nlohmann/json.hpp"
 
 Zymon::Zymon()
 {
@@ -17,9 +16,6 @@ Zymon::Zymon()
 	
 	EV = { 0 };
 
-	/*nlohmann::json j;
-
-	j.parse*/
 }
 
 Zymon::~Zymon()
