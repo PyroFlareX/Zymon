@@ -8,4 +8,4 @@ There are no current plans to make an installer or release version for the engin
 # Compiling
 
 Pretty simple. Compatible with Code::Blocks and VS 2017. I use SFML 2.5.1 which is the most current at the time of writing. It will probably work with some other versions though.
-Submit an issue if you have any problems related to the compiling. Help with linking will not be provided, nor with anything not strickly relate to problems with the above code.
+Submit an issue if you have any problems related to the compiling. Help with linking will not be provided, nor with anything not strictly related to problems with the above code.
