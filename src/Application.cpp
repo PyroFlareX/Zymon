@@ -29,7 +29,7 @@ void Application::RunLoop()
         currentState().input(p_window);
 
         /// Update
-        currentState().update(&m_renderer);
+        currentState().update(&m_renderer, p_window, dt.asSeconds());
 
         /// Draw
 		m_renderer.render(p_window);

@@ -19,7 +19,7 @@ void Player::updateDirection(int direction)
 	if (facingDir == direction)
 	{
 		tileSteps = tileSteps + 64;
-		if (tileSteps > 192)
+		if (tileSteps >= 192)
 		{
 			tileSteps = 0;
 		}
