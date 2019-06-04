@@ -4,7 +4,7 @@
 Context::Context()
 {
     sf::ContextSettings settings;
-    context.create(sf::VideoMode(800, 600), "Vinegar", sf::Style::Default, settings);
+    context.create(sf::VideoMode(800, 600), "Zymon : Testing Edition", sf::Style::Default, settings);
     context.setFramerateLimit(60);
     initAPI();
 }

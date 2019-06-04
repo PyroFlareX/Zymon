@@ -6,9 +6,6 @@ World::World()
 
 	std::vector<int> tiles = mapData.at("layers").at(0).at("data");
 
-	tiles.clear();
-	tiles.~vector();
-
 	int tile[1850];
 	int j = 0;
 	for (int i : tiles)
@@ -22,22 +19,26 @@ World::World()
 		std::cout << "In World File\n";
 	}
 
-	std::vector<int> tiles2 = mapData.at("layers").at(1).at("data");\
+	std::vector<int> tiles2 = mapData.at("layers").at(1).at("data");
 
 	int tile2[1850];
 	j = 0;
 	for (int i : tiles2)
 	{
+		if (i == 0) { i = 133; }
 		tile2[j] = i - 1;
 		++j;
 	}
-	tiles2.clear();
-	tiles2.~vector();
 
-	if (!layer2.load("res/Textures/tileset.png", sf::Vector2u(48, 48), tile2, 50, 37))
+	if (!layer2.load("res/Textures/tilesetz.png", sf::Vector2u(48, 48), tile2, 50, 37))
 	{
 		std::cout << "In World File\n";
 	}
+
+	tiles.clear();
+	tiles.~vector();
+	tiles2.clear();
+	tiles2.~vector();
 }
 
 World::~World()
