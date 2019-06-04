@@ -17,6 +17,6 @@ private:
 	sf::Image sheet;
 	sf::Texture tex;
 	int facingDir;
-	int tileSteps;
+	float tileSteps;
 };
 

@@ -55,19 +55,16 @@ void GameState::input()
 
 void GameState::update(sf::RenderWindow* window, float dt)
 {
-	wait += dt;
-	if (wait >= 0.15f)
+	if (true)//!(m_player.getBounds().intersects(sf::FloatRect(sf::Vector2f(192, 192), sf::Vector2f(192, 192)))))
 	{
-		m_player.Character.move(moveOffset);
-		wait = 0.0f;
+		m_player.Character.move(moveOffset * dt * 6.0f);
 	}
 	//std::cout << "Position of Player: " << m_player.Character.getPosition().x / 48 << " " << m_player.Character.getPosition().y / 48 << "\n";
-
 }
 
 void GameState::lateUpdate(Camera* cam)
 {
-	cam->lerp(m_player.Character.getPosition() + sf::Vector2f(0.0f, 48.0f), 0.1f);
+	cam->lerp(m_player.Character.getPosition() + sf::Vector2f(0.0f, 48.0f), 0.05f);
 	cam->setView();
 }
 

@@ -26,6 +26,7 @@ World::World()
 	for (int i : tiles2)
 	{
 		if (i == 0) { i = 133; }
+		//else {bounds.push_back(sf::FloatRect(sf::Vector2f(), sf::Vector2f(48, 48))) }
 		tile2[j] = i - 1;
 		++j;
 	}
@@ -39,6 +40,11 @@ World::World()
 	tiles.~vector();
 	tiles2.clear();
 	tiles2.~vector();
+}
+
+std::vector<sf::FloatRect> World::getBounds()
+{
+	return bounds;
 }
 
 World::~World()

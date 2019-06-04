@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\Context.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Player.cpp" />
@@ -30,10 +31,12 @@
     <ClCompile Include="src\Util\FileUtil.cpp" />
     <ClCompile Include="src\Util\Input.cpp" />
     <ClCompile Include="src\World\World.cpp" />
-    <ClCompile Include="src\Zymon.cpp" />
+    <ClCompile Include="src\Zymon\Move.cpp" />
+    <ClCompile Include="src\Zymon\Zymon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\Context.h" />
     <ClInclude Include="src\nlohmann\json.hpp" />
     <ClInclude Include="src\Player.h" />
@@ -46,7 +49,8 @@
     <ClInclude Include="src\Util\Random.h" />
     <ClInclude Include="src\World\TileMap.h" />
     <ClInclude Include="src\World\World.h" />
-    <ClInclude Include="src\Zymon.h" />
+    <ClInclude Include="src\Zymon\Move.h" />
+    <ClInclude Include="src\Zymon\Zymon.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Textures\tileset.png" />
