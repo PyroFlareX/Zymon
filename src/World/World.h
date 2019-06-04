@@ -11,7 +11,8 @@ class World
     public:
         World();
 
-		TileMap tilemap;
+		TileMap layer1;
+		TileMap layer2;
 
         ~World();
     protected:

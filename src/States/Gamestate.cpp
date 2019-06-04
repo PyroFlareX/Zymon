@@ -67,6 +67,7 @@ void GameState::update(Renderer* renderer, sf::RenderWindow* window, float dt)
 	view.setCenter(m_player.Character.getPosition() + sf::Vector2f(0.0f, 48.0f));
 	window->setView(view);
 
-	renderer->addDraw(map.tilemap);
+	renderer->addDraw(map.layer1);
+	renderer->addDraw(map.layer2);
 	renderer->addDraw(m_player.Character);
 }
