@@ -46,6 +46,7 @@
     <ClInclude Include="src\States\Gamestate.h" />
     <ClInclude Include="src\Util\FileUtil.h" />
     <ClInclude Include="src\Util\Input.h" />
+    <ClInclude Include="src\Util\math.h" />
     <ClInclude Include="src\Util\Random.h" />
     <ClInclude Include="src\World\TileMap.h" />
     <ClInclude Include="src\World\World.h" />

@@ -1,6 +1,7 @@
 #include "GameState.h"
 
 #include <iostream>
+#include "../Util/math.h"
 
 GameState::GameState(Application& app)
 : Basestate(app)
@@ -10,7 +11,7 @@ GameState::GameState(Application& app)
 
 GameState::~GameState()
 {
-
+	m_player.~Player();
 }
 
 void GameState::input()
@@ -57,7 +58,7 @@ void GameState::update(sf::RenderWindow* window, float dt)
 {
 	if (true)//!(m_player.getBounds().intersects(sf::FloatRect(sf::Vector2f(192, 192), sf::Vector2f(192, 192)))))
 	{
-		m_player.Character.move(moveOffset * dt * 6.0f);
+		m_player.Character.setPosition(lerp(m_player.Character.getPosition(), m_player.Character.getPosition() + moveOffset, dt * 4.0f));
 	}
 	//std::cout << "Position of Player: " << m_player.Character.getPosition().x / 48 << " " << m_player.Character.getPosition().y / 48 << "\n";
 }
@@ -71,6 +72,6 @@ void GameState::lateUpdate(Camera* cam)
 void GameState::render(Renderer* renderer)
 {
 	renderer->addDraw(map.layer1);
-	renderer->addDraw(map.layer2);
 	renderer->addDraw(m_player.Character);
+	renderer->addDraw(map.layer2);
 }

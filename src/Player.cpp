@@ -18,7 +18,7 @@ void Player::updateDirection(int direction)
 {
 	if (facingDir == direction)
 	{
-		tileSteps = tileSteps + 0.25f;
+		tileSteps = tileSteps + 0.125f;
 		if (tileSteps >= 3)
 		{
 			tileSteps = 0.0f;
