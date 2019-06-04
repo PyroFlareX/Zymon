@@ -6,12 +6,22 @@ BattleState::BattleState(Application& app)
 
 }
 
-void BattleState::input(sf::RenderWindow* window)
+void BattleState::input()
 {
 
 }
 
-void BattleState::update(Renderer* renderer, sf::RenderWindow* window, float dt)
+void BattleState::update(sf::RenderWindow* window, float dt)
+{
+
+}
+
+void BattleState::lateUpdate(Camera* cam)
+{
+
+}
+
+void BattleState::render(Renderer* render)
 {
 
 }

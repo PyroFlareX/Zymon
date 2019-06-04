@@ -67,7 +67,7 @@ public:
 	IVs IV;
 
 	~Zymon();
-private:
+protected:
 	unsigned int dexID;
 	
 };

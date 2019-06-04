@@ -6,8 +6,10 @@ class BattleState :	public Basestate
 public:
 	BattleState(Application& application);
 
-	void input(sf::RenderWindow* window) override;
-	void update(Renderer* renderer, sf::RenderWindow* window, float dt) override;
+	void input() override;
+	void update(sf::RenderWindow* window, float dt) override;
+	void lateUpdate(Camera* cam) override;
+	void render(Renderer* renderer) override;
 
 	~BattleState();
 protected:

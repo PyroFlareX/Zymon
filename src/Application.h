@@ -8,7 +8,7 @@
 #include "States/Basestate.h"
 #include "Context.h"
 #include "Renderers/Renderer.h"
-//#include "Input.h"
+#include "Camera.h"
 
 class Basestate;
 

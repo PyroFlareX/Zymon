@@ -13,7 +13,7 @@ GameState::~GameState()
 
 }
 
-void GameState::input(sf::RenderWindow* window)
+void GameState::input()
 {
 	moveOffset = sf::Vector2f(0.f, 0.f);
 
@@ -53,7 +53,7 @@ void GameState::input(sf::RenderWindow* window)
     }
 }
 
-void GameState::update(Renderer* renderer, sf::RenderWindow* window, float dt)
+void GameState::update(sf::RenderWindow* window, float dt)
 {
 	wait += dt;
 	if (wait >= 0.15f)
@@ -62,11 +62,17 @@ void GameState::update(Renderer* renderer, sf::RenderWindow* window, float dt)
 		wait = 0.0f;
 	}
 	//std::cout << "Position of Player: " << m_player.Character.getPosition().x / 48 << " " << m_player.Character.getPosition().y / 48 << "\n";
-	
-	view = sf::View(window->getView());
-	view.setCenter(m_player.Character.getPosition() + sf::Vector2f(0.0f, 48.0f));
-	window->setView(view);
 
+}
+
+void GameState::lateUpdate(Camera* cam)
+{
+	cam->lerp(m_player.Character.getPosition() + sf::Vector2f(0.0f, 48.0f), 0.1f);
+	cam->setView();
+}
+
+void GameState::render(Renderer* renderer)
+{
 	renderer->addDraw(map.layer1);
 	renderer->addDraw(map.layer2);
 	renderer->addDraw(m_player.Character);

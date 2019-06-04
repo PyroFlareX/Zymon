@@ -20,18 +20,21 @@ void Application::RunLoop()
 	m_context.update();
 
     sf::RenderWindow* p_window = m_context.getContext();
+	Camera cam(p_window);
     while(m_context.isOpen())
     {
 		dt = timer.restart();
         ///Main Loop, do cycle of Input, Update, Draw, Render & Swap Buffers, Handle Events
         m_context.clear();
         ///Input
-        currentState().input(p_window);
+        currentState().input();
 
         /// Update
-        currentState().update(&m_renderer, p_window, dt.asSeconds());
+        currentState().update(p_window, dt.asSeconds());
+		currentState().lateUpdate(&cam);
 
         /// Draw
+		currentState().render(&m_renderer);
 		m_renderer.render(p_window);
 
         /// Render
