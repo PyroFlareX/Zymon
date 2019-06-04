@@ -35,6 +35,7 @@ void GameState::input()
     if(input.up)
     {
         std::cout << "Going Up!\n";
+		std::cout << "Dev Short Cut: @TODO; make this change states to BattleState";
     }
     if(input.down)
     {
@@ -56,6 +57,7 @@ void GameState::input()
 
 void GameState::update(sf::RenderWindow* window, float dt)
 {
+	/// Collision Detection Here
 	if (true)//!(m_player.getBounds().intersects(sf::FloatRect(sf::Vector2f(192, 192), sf::Vector2f(192, 192)))))
 	{
 		m_player.Character.setPosition(lerp(m_player.Character.getPosition(), m_player.Character.getPosition() + moveOffset, dt * 4.0f));

@@ -1,5 +1,7 @@
 #include "Basestate.h"
 
+#include "../Zymon/Battle.h"
+
 
 class BattleState :	public Basestate
 {
@@ -15,5 +17,7 @@ public:
 protected:
 
 private:
-
+	Battle battle;
+	sf::Text msg;
+	sf::Font font;
 };

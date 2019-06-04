@@ -9,6 +9,7 @@ public:
 
 	int power;
 	int accuracy;
+	int PP;
 
 	int type;
 

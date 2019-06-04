@@ -1,6 +1,7 @@
 #include "Application.h"
 
 #include "States/Gamestate.h"
+#include "States/BattleState.h"
 #include "Util/FileUtil.h"
 
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "Zymon/Zymon.h"
 
 class Player
 {
@@ -11,6 +12,8 @@ public:
 
 	sf::FloatRect getBounds();
 	void updateDirection(int direction);
+
+	Zymon zyTeam[6];
 
 	~Player();
 private:

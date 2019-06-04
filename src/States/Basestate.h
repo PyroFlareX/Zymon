@@ -17,6 +17,7 @@ public:
     virtual void update(sf::RenderWindow* window, float dt) = 0;
 	virtual void lateUpdate(Camera* cam) = 0;
 	virtual void render(Renderer* renderer) = 0;
+	//virtual 
 
     virtual ~Basestate() = default;
 protected:
