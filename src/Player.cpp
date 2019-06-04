@@ -18,8 +18,8 @@ void Player::updateDirection(int direction)
 {
 	if (facingDir == direction)
 	{
-		tileSteps = tileSteps + 64;
-		if (tileSteps >= 192)
+		tileSteps = tileSteps + 1;
+		if (tileSteps >= 3)
 		{
 			tileSteps = 0;
 		}
@@ -32,22 +32,22 @@ void Player::updateDirection(int direction)
 
 	if (facingDir == 0)
 	{
-		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(tileSteps, 128), sf::Vector2i(48, 64)));
+		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(tileSteps * 64, 128), sf::Vector2i(48, 64)));
 		Character.setTexture(tex);
 	}
 	if (facingDir == 1)
 	{
-		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(tileSteps, 64), sf::Vector2i(48, 64)));
+		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(tileSteps * 64, 64), sf::Vector2i(48, 64)));
 		Character.setTexture(tex);
 	}
 	if (facingDir == 2)
 	{
-		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(tileSteps, 192), sf::Vector2i(48, 64)));
+		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(tileSteps * 64, 192), sf::Vector2i(48, 64)));
 		Character.setTexture(tex);
 	}
 	if (facingDir == 3)
 	{
-		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(tileSteps, 0), sf::Vector2i(48, 64)));
+		tex.loadFromImage(sheet, sf::IntRect(sf::Vector2i(tileSteps * 64, 0), sf::Vector2i(48, 64)));
 		Character.setTexture(tex);
 	}
 }

@@ -25,6 +25,7 @@
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Renderers\Renderer.cpp" />
     <ClCompile Include="src\States\Basestate.cpp" />
+    <ClCompile Include="src\States\BattleState.cpp" />
     <ClCompile Include="src\States\Gamestate.cpp" />
     <ClCompile Include="src\Util\FileUtil.cpp" />
     <ClCompile Include="src\Util\Input.cpp" />
@@ -38,6 +39,7 @@
     <ClInclude Include="src\Player.h" />
     <ClInclude Include="src\Renderers\Renderer.h" />
     <ClInclude Include="src\States\Basestate.h" />
+    <ClInclude Include="src\States\BattleState.h" />
     <ClInclude Include="src\States\Gamestate.h" />
     <ClInclude Include="src\Util\FileUtil.h" />
     <ClInclude Include="src\Util\Input.h" />
