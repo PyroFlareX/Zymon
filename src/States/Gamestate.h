@@ -8,8 +8,8 @@
 
 #include "../Util/Input.h"
 
-class Application;
 class Basestate;
+class BattleState;
 
 class GameState : public Basestate
 {
@@ -21,7 +21,7 @@ public:
 	void lateUpdate(Camera* cam) override;
 	void render(Renderer* renderer) override;
 
-    ~GameState();
+    ~GameState() override;
 protected:
 
 

@@ -20,12 +20,12 @@ public:
     void RunLoop();
 
     //State Stuff
-    template<typename S, typename... Args>
-    void pushState(Args&&... args)
-    {
-        m_states.push_back(std::make_unique<S>(std::forward<Args>(args)...));
-    }
 
+	void pushState(std::unique_ptr<Basestate> state)
+	{
+		m_states.emplace_back(std::move(state));
+	}
+	
     void popState();
     void handleEvents();
 protected:
@@ -36,5 +36,6 @@ private:
     std::vector<std::unique_ptr<Basestate>> m_states;
 	Renderer m_renderer;
 };
+
 
 #endif // APPLICATION_H

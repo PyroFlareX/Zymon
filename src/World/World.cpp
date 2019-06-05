@@ -42,10 +42,10 @@ World::World()
 	tiles2.~vector();
 }
 
-std::vector<sf::FloatRect> World::getBounds()
+/*std::vector<sf::FloatRect> World::getBounds()
 {
 	return bounds;
-}
+}*/
 
 World::~World()
 {

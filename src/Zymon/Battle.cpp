@@ -36,6 +36,11 @@ bool Battle::isSelected()
 	return false;
 }
 
+bool Battle::checkEnd()
+{
+	return false;
+}
+
 Battle::~Battle()
 {
 

@@ -2,6 +2,8 @@
 
 #include "../Zymon/Battle.h"
 
+class Application;
+class Gamestate;
 
 class BattleState :	public Basestate
 {
@@ -13,7 +15,7 @@ public:
 	void lateUpdate(Camera* cam) override;
 	void render(Renderer* renderer) override;
 
-	~BattleState();
+	~BattleState() override;
 protected:
 
 private:

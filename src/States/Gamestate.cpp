@@ -25,28 +25,29 @@ void GameState::input()
         std::cout << "Going Right!\n";
         moveOffset.x += 48.0f;
 		m_player.updateDirection(0);
-    }
+    } else
     if(input.left)
     {
         std::cout << "Going Left!\n";
         moveOffset.x -= 48.0f;
 		m_player.updateDirection(1);
-    }
+    } else
     if(input.up)
     {
         std::cout << "Going Up!\n";
-		std::cout << "Dev Short Cut: @TODO; make this change states to BattleState";
-    }
+		std::cout << "Dev Short Cut: Battling\n";
+		m_application->pushState(std::make_unique<BattleState>(*m_application));
+    } else
     if(input.down)
     {
         std::cout << "Going Down!\n";
-    }
+    } else
     if(input.forth)
     {
         std::cout << "Going Forward!\n";
 		moveOffset.y -= 48.0f;
 		m_player.updateDirection(2);
-    }
+    } else
     if(input.backwards)
     {
         std::cout << "Going Back!\n";

@@ -9,26 +9,27 @@ Input::Inputs Input::getInput()
 	{
 		input.forth = true;
 	}
-	else
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 	{
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-		{
-			input.backwards = true;
-		}
-		else
-		{
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-			{
-				input.left = true;
-			}
-			else
-			{
-				if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-				{
-					input.right = true;
-				}
-			}
-		}
+		input.backwards = true;
 	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+	{
+		input.left = true;
+	}		
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+	{
+		input.right = true;
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	{
+		input.up = true;
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	{
+		input.down = true;
+	}
+	
+	
 	return input;
 }

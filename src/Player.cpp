@@ -54,6 +54,5 @@ void Player::updateDirection(int direction)
 
 Player::~Player()
 {
-	tex.~Texture();
-	sheet.~Image();
+
 }

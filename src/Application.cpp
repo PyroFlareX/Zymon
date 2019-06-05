@@ -7,7 +7,8 @@
 
 Application::Application()
 {
-    pushState<GameState>(*this);
+	//pushState<BattleState>(*this);
+	pushState(std::make_unique<GameState>(*this));
 }
 
 void Application::RunLoop()
@@ -22,7 +23,7 @@ void Application::RunLoop()
 
     sf::RenderWindow* p_window = m_context.getContext();
 	Camera cam(p_window);
-    while(m_context.isOpen())
+    while(m_context.isOpen() && !m_states.empty())
     {
 		dt = timer.restart();
         ///Main Loop, do cycle of Input, Update, Draw, Render & Swap Buffers, Handle Events

@@ -1,5 +1,7 @@
 #include "BattleState.h"
 
+#include "../Util/Input.h"
+
 BattleState::BattleState(Application& app)
 	: Basestate(app)
 {
@@ -15,6 +17,33 @@ BattleState::BattleState(Application& app)
 void BattleState::input()
 {
 	battle.waitForSelection();
+
+	Input::Inputs input = Input::getInput();
+
+	if (input.right)
+	{
+		m_application->pushState(std::make_unique<Gamestate>(*m_application));
+	}
+	if (input.left)
+	{
+
+	}
+	if (input.up)
+	{
+		
+	}
+	if (input.down)
+	{
+		
+	}
+	if (input.forth)
+	{
+		
+	}
+	if (input.backwards)
+	{
+		
+	}
 }
 
 void BattleState::update(sf::RenderWindow* window, float dt)
@@ -28,16 +57,19 @@ void BattleState::update(sf::RenderWindow* window, float dt)
 
 void BattleState::lateUpdate(Camera* cam)
 {
-	cam->setView(sf::View());
+	//cam->setView(sf::View());
 }
 
 void BattleState::render(Renderer* render)
 {
 	render->addDraw(msg);
+	if (battle.checkEnd())
+	{
+		m_application->popState();
+	}
 }
 
 BattleState::~BattleState()
 {
-	font.~Font();
-	battle.~Battle();
+	//m_application->popState();
 }
