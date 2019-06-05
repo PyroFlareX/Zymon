@@ -36,7 +36,7 @@ void GameState::input()
     {
         std::cout << "Going Up!\n";
 		std::cout << "Dev Short Cut: Battling\n";
-		m_application->pushState(std::make_unique<BattleState>(*m_application));
+		//m_application->pushState(std::make_unique<BattleState>(*m_application));
     } else
     if(input.down)
     {

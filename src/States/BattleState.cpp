@@ -22,7 +22,7 @@ void BattleState::input()
 
 	if (input.right)
 	{
-		m_application->pushState(std::make_unique<Gamestate>(*m_application));
+		//m_application->pushState(std::unique_ptr<BattleState>(dynamic_cast<BattleState*>(m_application)));
 	}
 	if (input.left)
 	{
