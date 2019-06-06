@@ -8,8 +8,8 @@
 #include "Context.h"
 #include "Renderers/Renderer.h"
 #include "Camera.h"
+#include "States/Basestate.h"
 
-class Basestate;
 
 class Application
 {

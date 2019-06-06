@@ -1,11 +1,12 @@
 #ifndef BASESTATE_H
 #define BASESTATE_H
 
-#include "../Application.h"
+//#include "../Application.h"
 #include "../Renderers/Renderer.h"
 #include <SFML/Graphics.hpp>
 #include "../Camera.h"
 
+class Application;
 
 class Basestate
 {
