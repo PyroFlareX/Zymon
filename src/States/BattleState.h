@@ -1,16 +1,15 @@
 #include "Basestate.h"
 
 #include "../Zymon/Battle.h"
+#include "Basestate.h"
 
-class Application;
-class Gamestate;
 
 class BattleState :	public Basestate
 {
 public:
-	BattleState(Application& application);
+	BattleState();
 
-	void input() override;
+	bool input(Application &app) override;
 	void update(sf::RenderWindow* window, float dt) override;
 	void lateUpdate(Camera* cam) override;
 	void render(Renderer* renderer) override;

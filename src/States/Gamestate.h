@@ -2,21 +2,17 @@
 #define GAMESTATE_H
 
 #include "Basestate.h"
-#include "../Application.h"
 #include "../World/World.h"
 #include "../Player.h"
 
 #include "../Util/Input.h"
 
-class Basestate;
-class BattleState;
-
 class GameState : public Basestate
 {
 public:
-    GameState(Application& application);
+    GameState();
 
-    void input() override;
+    bool input(Application &app) override;
     void update(sf::RenderWindow* window, float dt) override;
 	void lateUpdate(Camera* cam) override;
 	void render(Renderer* renderer) override;

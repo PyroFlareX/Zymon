@@ -2,19 +2,19 @@
 
 #include <iostream>
 #include "../Util/math.h"
+#include "BattleState.h"
 
-GameState::GameState(Application& app)
-: Basestate(app)
+GameState::GameState()
 {
 	wait = 0.0f;
 }
 
 GameState::~GameState()
 {
-	m_player.~Player();
+
 }
 
-void GameState::input()
+bool GameState::input(Application &app)
 {
 	moveOffset = sf::Vector2f(0.f, 0.f);
 
@@ -36,7 +36,7 @@ void GameState::input()
     {
         std::cout << "Going Up!\n";
 		std::cout << "Dev Short Cut: Battling\n";
-		//m_application->pushState(std::make_unique<BattleState>(*m_application));
+		return true;
     } else
     if(input.down)
     {
@@ -54,6 +54,7 @@ void GameState::input()
 		moveOffset.y += 48.0f;
 		m_player.updateDirection(3);
     }
+	return false;
 }
 
 void GameState::update(sf::RenderWindow* window, float dt)

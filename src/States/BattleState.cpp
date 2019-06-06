@@ -2,8 +2,7 @@
 
 #include "../Util/Input.h"
 
-BattleState::BattleState(Application& app)
-	: Basestate(app)
+BattleState::BattleState()
 {
 	//Play Battle Video
 	
@@ -14,7 +13,7 @@ BattleState::BattleState(Application& app)
 	msg.setString("1: Move 1\n2: Move 2\n3: Move 3\n4: Move 4");
 }
 
-void BattleState::input()
+bool BattleState::input(Application &app)
 {
 	battle.waitForSelection();
 
@@ -22,7 +21,7 @@ void BattleState::input()
 
 	if (input.right)
 	{
-		//m_application->pushState(std::unique_ptr<BattleState>(dynamic_cast<BattleState*>(m_application)));
+
 	}
 	if (input.left)
 	{
@@ -44,6 +43,7 @@ void BattleState::input()
 	{
 		
 	}
+	return false;
 }
 
 void BattleState::update(sf::RenderWindow* window, float dt)

@@ -6,14 +6,12 @@
 #include <SFML/Graphics.hpp>
 #include "../Camera.h"
 
-class Application;
 
 class Basestate
 {
 public:
-    Basestate(Application& application);
 
-    virtual void input() = 0;
+    virtual bool input(Application &app) = 0;
     virtual void update(sf::RenderWindow* window, float dt) = 0;
 	virtual void lateUpdate(Camera* cam) = 0;
 	virtual void render(Renderer* renderer) = 0;
@@ -21,7 +19,6 @@ public:
 
     virtual ~Basestate() = default;
 protected:
-    Application* m_application;
 
 };
 

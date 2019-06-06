@@ -7,8 +7,7 @@
 
 Application::Application()
 {
-	//pushState<BattleState>(*this);
-	pushState(std::make_unique<GameState>(*this));
+	pushState(std::make_unique<GameState>());
 }
 
 void Application::RunLoop()
@@ -29,7 +28,10 @@ void Application::RunLoop()
         ///Main Loop, do cycle of Input, Update, Draw, Render & Swap Buffers, Handle Events
         m_context.clear();
         ///Input
-        currentState().input();
+		if (currentState().input(*this))
+		{
+			pushState(std::make_unique<BattleState>());
+		}
 
         /// Update
         currentState().update(p_window, dt.asSeconds());
