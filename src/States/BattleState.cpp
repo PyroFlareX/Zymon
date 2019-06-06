@@ -65,7 +65,7 @@ void BattleState::render(Renderer* render)
 	render->addDraw(msg);
 	if (battle.checkEnd())
 	{
-		m_application->popState();
+		
 	}
 }
 

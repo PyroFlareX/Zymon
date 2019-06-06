@@ -10,6 +10,7 @@
 class Basestate
 {
 public:
+	Basestate() {};
 
     virtual bool input(Application &app) = 0;
     virtual void update(sf::RenderWindow* window, float dt) = 0;

@@ -24,9 +24,6 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\States\Basestate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\States\Gamestate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

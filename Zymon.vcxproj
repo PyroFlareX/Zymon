@@ -25,7 +25,6 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Renderers\Renderer.cpp" />
-    <ClCompile Include="src\States\Basestate.cpp" />
     <ClCompile Include="src\States\BattleState.cpp" />
     <ClCompile Include="src\States\Gamestate.cpp" />
     <ClCompile Include="src\Util\FileUtil.cpp" />
