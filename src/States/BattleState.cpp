@@ -15,7 +15,6 @@ BattleState::BattleState()
 
 bool BattleState::input(Application &app)
 {
-	battle.waitForSelection();
 
 	Input::Inputs input = Input::getInput();
 
@@ -48,16 +47,12 @@ bool BattleState::input(Application &app)
 
 void BattleState::update(sf::RenderWindow* window, float dt)
 {
-	if (battle.isSelected())
-	{
-		battle.doTurn();
-		battle.nextTurn();
-	}
+	battle.update();
 }
 
 void BattleState::lateUpdate(Camera* cam)
 {
-	//cam->setView(sf::View());
+	
 }
 
 void BattleState::render(Renderer* render)
@@ -71,5 +66,5 @@ void BattleState::render(Renderer* render)
 
 BattleState::~BattleState()
 {
-	//m_application->popState();
+
 }

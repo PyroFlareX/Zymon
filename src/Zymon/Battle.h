@@ -8,9 +8,8 @@ class Battle
 public:
 	Battle();
 
-	void doTurn();
-	void waitForSelection();
-	void nextTurn();
+	void update() {};
+	void getSelections(Move playerMove) {};
 
 	bool isSelected();
 	bool checkEnd();
@@ -26,6 +25,8 @@ public:
 
 	~Battle();
 private:
-
+	void doTurn();
+	void waitForSelection();
+	void nextTurn();
 };
 

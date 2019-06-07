@@ -30,7 +30,7 @@ void Application::RunLoop()
         ///Input
 		if (currentState().input(*this))
 		{
-			pushState(std::make_unique<BattleState>());
+			//pushState(std::make_unique<BattleState>());
 		}
 
         /// Update

@@ -6,7 +6,7 @@
 
 GameState::GameState()
 {
-	wait = 0.0f;
+	TryPause = false;
 }
 
 GameState::~GameState()
@@ -18,53 +18,75 @@ bool GameState::input(Application &app)
 {
 	moveOffset = sf::Vector2f(0.f, 0.f);
 
-	Input::Inputs input = Input::getInput();
+	Input::Inputs input;
+	if (!isPaused)
+	{
+		input = Input::getInput();
 
-    if(input.right)
-    {
-        std::cout << "Going Right!\n";
-        moveOffset.x += 48.0f;
-		m_player.updateDirection(0);
-    } else
-    if(input.left)
-    {
-        std::cout << "Going Left!\n";
-        moveOffset.x -= 48.0f;
-		m_player.updateDirection(1);
-    } else
-    if(input.up)
-    {
-        std::cout << "Going Up!\n";
-		std::cout << "Dev Short Cut: Battling\n";
-		return true;
-    } else
-    if(input.down)
-    {
-        std::cout << "Going Down!\n";
-    } else
-    if(input.forth)
-    {
-        std::cout << "Going Forward!\n";
-		moveOffset.y -= 48.0f;
-		m_player.updateDirection(2);
-    } else
-    if(input.backwards)
-    {
-        std::cout << "Going Back!\n";
-		moveOffset.y += 48.0f;
-		m_player.updateDirection(3);
-    }
+		if (input.right)
+		{
+			std::cout << "Going Right!\n";
+			moveOffset.x += 48.0f;
+			m_player.updateDirection(0);
+		}
+		else
+			if (input.left)
+			{
+				std::cout << "Going Left!\n";
+				moveOffset.x -= 48.0f;
+				m_player.updateDirection(1);
+			}
+			else
+				if (input.up)
+				{
+					std::cout << "Going Up!\n";
+					std::cout << "Dev Short Cut: Battling\n";
+
+					app.pushState(std::make_unique<BattleState>());
+
+				}
+				else
+					if (input.down)
+					{
+						std::cout << "Going Down!\n";
+					}
+					else
+						if (input.forth)
+						{
+							std::cout << "Going Forward!\n";
+							moveOffset.y -= 48.0f;
+							m_player.updateDirection(2);
+						}
+						else
+							if (input.backwards)
+							{
+								std::cout << "Going Back!\n";
+								moveOffset.y += 48.0f;
+								m_player.updateDirection(3);
+							}
+	}
 	return false;
 }
 
 void GameState::update(sf::RenderWindow* window, float dt)
 {
-	/// Collision Detection Here
-	if (true)//!(m_player.getBounds().intersects(sf::FloatRect(sf::Vector2f(192, 192), sf::Vector2f(192, 192)))))
+	if (window->hasFocus() && !TryPause)
 	{
-		m_player.Character.setPosition(lerp(m_player.Character.getPosition(), m_player.Character.getPosition() + moveOffset, dt * 4.0f));
+		isPaused = false;
 	}
-	//std::cout << "Position of Player: " << m_player.Character.getPosition().x / 48 << " " << m_player.Character.getPosition().y / 48 << "\n";
+	else
+	{
+		isPaused = true;
+		TryPause = false;
+	}
+	if (!isPaused)
+	{
+		/// Collision Detection Here
+		if (true)
+		{
+			m_player.Character.setPosition(lerp(m_player.Character.getPosition(), m_player.Character.getPosition() + moveOffset, dt * 4.0f));
+		}
+	}
 }
 
 void GameState::lateUpdate(Camera* cam)
@@ -78,4 +100,9 @@ void GameState::render(Renderer* renderer)
 	renderer->addDraw(map.layer1);
 	renderer->addDraw(m_player.Character);
 	renderer->addDraw(map.layer2);
+}
+
+void GameState::tryPause()
+{
+	TryPause = true;
 }

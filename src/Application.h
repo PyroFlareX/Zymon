@@ -24,7 +24,7 @@ public:
 	{
 		m_states.emplace_back(std::move(state));
 	}
-	
+
     void popState();
     void handleEvents();
 protected:
