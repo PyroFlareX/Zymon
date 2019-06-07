@@ -36,6 +36,8 @@ World::World()
 		std::cout << "In World File\n";
 	}
 
+	
+
 	tiles.clear();
 	tiles.~vector();
 	tiles2.clear();

@@ -91,7 +91,7 @@ void GameState::update(sf::RenderWindow* window, float dt)
 
 void GameState::lateUpdate(Camera* cam)
 {
-	cam->lerp(m_player.Character.getPosition() + sf::Vector2f(0.0f, 48.0f), 0.05f);
+	cam->lerp(m_player.Character.getPosition() + sf::Vector2f(0.0f, 48.0f), 0.01f);
 	cam->setView();
 }
 

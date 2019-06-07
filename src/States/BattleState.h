@@ -2,6 +2,7 @@
 
 #include "../Zymon/Battle.h"
 #include "Basestate.h"
+#include "../Application.h"
 
 
 class BattleState :	public Basestate
