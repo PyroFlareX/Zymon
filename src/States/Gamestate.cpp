@@ -41,9 +41,9 @@ bool GameState::input(Application &app)
 				{
 					std::cout << "Going Up!\n";
 					std::cout << "Dev Short Cut: Battling\n";
-
+					tryPause();
 					app.pushState(std::make_unique<BattleState>());
-
+					
 				}
 				else
 					if (input.down)
@@ -82,7 +82,7 @@ void GameState::update(sf::RenderWindow* window, float dt)
 	if (!isPaused)
 	{
 		/// Collision Detection Here
-		if (true)
+		if (true)//m_player.Character.getGlobalBounds().intersects()
 		{
 			m_player.Character.setPosition(lerp(m_player.Character.getPosition(), m_player.Character.getPosition() + moveOffset, dt * 4.0f));
 		}

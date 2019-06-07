@@ -6,5 +6,5 @@ struct Collision
 {
 	Collision(const int* collisionTiles);
 
-	//sf::FloatRect get
+	sf::FloatRect getBounds() {};
 };
