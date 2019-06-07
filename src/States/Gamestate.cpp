@@ -82,7 +82,7 @@ void GameState::update(sf::RenderWindow* window, float dt)
 	if (!isPaused)
 	{
 		/// Collision Detection Here
-		if (true)//m_player.Character.getGlobalBounds().intersects()
+		if (m_player.Character.getGlobalBounds().intersects(sf::FloatRect(sf::Vector2f(0.0f, 0.0f), sf::Vector2f(500.0f, 370.0f))))
 		{
 			m_player.Character.setPosition(lerp(m_player.Character.getPosition(), m_player.Character.getPosition() + moveOffset, dt * 4.0f));
 		}
