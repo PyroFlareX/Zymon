@@ -81,10 +81,11 @@ void GameState::update(sf::RenderWindow* window, float dt)
 	}
 	if (!isPaused)
 	{
+		m_player.Character.setPosition(lerp(m_player.Character.getPosition(), m_player.Character.getPosition() + moveOffset, dt * 4.0f));
 		/// Collision Detection Here
-		if (m_player.Character.getGlobalBounds().intersects(sf::FloatRect(sf::Vector2f(0.0f, 0.0f), sf::Vector2f(500.0f, 370.0f))))
+		if (!m_player.Character.getGlobalBounds().intersects(sf::FloatRect(sf::Vector2f(0.0f, 0.0f), sf::Vector2f(-10.0f, -370.0f))))
 		{
-			m_player.Character.setPosition(lerp(m_player.Character.getPosition(), m_player.Character.getPosition() + moveOffset, dt * 4.0f));
+			m_player.Character.setPosition(sf::Vector2f(-1 * lerp(m_player.Character.getPosition(), m_player.Character.getPosition() + moveOffset, dt * 4.0f).x,-1 * lerp(m_player.Character.getPosition(), m_player.Character.getPosition() + moveOffset, dt * 4.0f).y));
 		}
 	}
 }
