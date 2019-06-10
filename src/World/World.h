@@ -13,15 +13,13 @@ class World
 
 		TileMap layer1;
 		TileMap layer2;
-
-		//std::vector<sf::FloatRect> getBounds();
+		
 
         ~World();
     protected:
 
     private:
 		nlohmann::json mapData;
-		//std::vector<sf::FloatRect> bounds;
 };
 
 #endif // WORLD_H

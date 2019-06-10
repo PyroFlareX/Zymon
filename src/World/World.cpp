@@ -1,12 +1,15 @@
 #include "World.h"
 
+constexpr int MAP_HEIGHT = 37;
+constexpr int MAP_WIDTH = 50;
+
 World::World()
 {
 	mapData = getJsonFile("res/Maps/Overworld.json");
 
 	std::vector<int> tiles = mapData.at("layers").at(0).at("data");
 
-	int tile[1850];
+	int tile[MAP_HEIGHT * MAP_WIDTH];
 	int j = 0;
 	for (int i : tiles)
 	{
@@ -14,14 +17,14 @@ World::World()
 		++j;
 	}
 
-	if (!layer1.load("res/Textures/tileset.png", sf::Vector2u(48, 48), tile, 50, 37))
+	if (!layer1.load("res/Textures/tileset.png", sf::Vector2u(48, 48), tile, MAP_WIDTH, MAP_HEIGHT))
 	{
 		std::cout << "In World File\n";
 	}
 
 	std::vector<int> tiles2 = mapData.at("layers").at(1).at("data");
 
-	int tile2[1850];
+	int tile2[MAP_HEIGHT * MAP_WIDTH ];
 	j = 0;
 	for (int i : tiles2)
 	{
@@ -31,10 +34,12 @@ World::World()
 		++j;
 	}
 
-	if (!layer2.load("res/Textures/tilesetz.png", sf::Vector2u(48, 48), tile2, 50, 37))
+	if (!layer2.load("res/Textures/tilesetz.png", sf::Vector2u(48, 48), tile2, MAP_WIDTH, MAP_HEIGHT))
 	{
 		std::cout << "In World File\n";
 	}
+
+	
 
 	tiles.clear();
 	tiles.~vector();

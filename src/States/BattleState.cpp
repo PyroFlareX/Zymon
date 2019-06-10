@@ -32,7 +32,7 @@ bool BattleState::input(Application &app)
 	}
 	if (input.down)
 	{
-		
+		app.popState();
 	}
 	if (input.forth)
 	{
