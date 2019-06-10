@@ -25,6 +25,8 @@ protected:
 
 
 private:
+	bool isColliding(sf::Vector2f playerPos);
+
 	Player m_player;
 	World map;
 	sf::Vector2f moveOffset;
