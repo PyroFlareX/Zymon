@@ -3,7 +3,14 @@
 
 Battle::Battle()
 {
-
+	player[0].Type[0] = Types::NORMAL;
+	player[0].Type[1] = Types::none;
+	player[0].stats.Atk = 12;
+	player[0].stats.Def = 10;
+	player[0].stats.HP = 20;
+	player[0].stats.Speed = 10;
+	opponent[0].stats.Def = 5;
+	opponent[0].stats.HP = 100;
 }
 
 void Battle::update()
@@ -15,12 +22,16 @@ void Battle::update()
 	}
 }
 
-void Battle::getSelections(Move playerMove)
+void Battle::getSelections(Move inMove)
 {
-	moveQueue.push_back(playerMove);
+	if (!isSelected())
+	{
+		moveQueue.push_back(inMove);
+		playerMove = inMove;
+	}
 }
 
-void Battle::doTurn()
+bool Battle::doTurn()
 {
 	if (player[0].stats.Speed >= opponent[0].stats.Speed)
 	{
@@ -33,6 +44,7 @@ void Battle::doTurn()
 		opponent[0].stats.HP -= playerMove.useMove(opponent[0].Type[0], opponent[0].Type[1]) * player[0].stats.Atk / opponent[0].stats.Def;
 	}
 	nextTurn();
+	return true;
 }
 
 void Battle::waitForSelection()
@@ -48,7 +60,11 @@ void Battle::nextTurn()
 
 bool Battle::isSelected()
 {
-	if (true)
+	if (!moveQueue.empty())
+	{
+		return true;
+	}
+	else
 	{
 		return false;
 	}
@@ -56,7 +72,15 @@ bool Battle::isSelected()
 
 bool Battle::checkEnd()
 {
-	return false;
+	bool faint = (opponent[0].stats.HP <= 0) || (player[0].stats.HP <= 0);
+	if (faint)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 Battle::~Battle()

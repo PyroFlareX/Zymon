@@ -10,10 +10,11 @@ public:
 	Battle();
 
 	void update();
-	void getSelections(Move playerMove);
+	void getSelections(Move inMove);
 
 	bool isSelected();
 	bool checkEnd();
+	bool doTurn();
 
 	Zymon player[6];
 	Zymon opponent[6];
@@ -28,7 +29,6 @@ public:
 private:
 	std::vector<Move> moveQueue;
 
-	void doTurn();
 	void waitForSelection();
 	void nextTurn();
 };

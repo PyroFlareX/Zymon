@@ -75,7 +75,14 @@ bool BattleState::input(Application &app)
 
 void BattleState::update(sf::RenderWindow* window, float dt)
 {
-	battle.update();
+	//battle.update();
+	if (battle.isSelected())
+	{
+		if (battle.doTurn())
+		{
+			status.setString("Utilized the move of Tackle!");
+		}
+	}
 }
 
 void BattleState::lateUpdate(Camera* cam)
