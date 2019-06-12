@@ -3,14 +3,17 @@
 
 Battle::Battle()
 {
+	//Make Example for User Zymon
 	player[0].Type[0] = Types::NORMAL;
 	player[0].Type[1] = Types::none;
 	player[0].stats.Atk = 12;
 	player[0].stats.Def = 10;
 	player[0].stats.HP = 20;
 	player[0].stats.Speed = 10;
+
+	//So no x / 0 errors and so there is some noninstant battle kills
 	opponent[0].stats.Def = 5;
-	opponent[0].stats.HP = 100;
+	opponent[0].stats.HP = 1000;
 }
 
 void Battle::update()
