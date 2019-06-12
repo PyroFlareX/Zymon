@@ -10,6 +10,7 @@ public:
 	sf::Vector2f lerp(sf::Vector2f target, float gradient);
 	void setView();
 	void setView(sf::View view);
+	void setViewDefault();
 
 	~Camera();
 private:

@@ -2,14 +2,15 @@
 
 #include "Zymon.h"
 #include "Move.h"
+#include <vector>
 
 class Battle
 {
 public:
 	Battle();
 
-	void update() {};
-	void getSelections(Move playerMove) {};
+	void update();
+	void getSelections(Move playerMove);
 
 	bool isSelected();
 	bool checkEnd();
@@ -25,6 +26,8 @@ public:
 
 	~Battle();
 private:
+	std::vector<Move> moveQueue;
+
 	void doTurn();
 	void waitForSelection();
 	void nextTurn();

@@ -25,6 +25,11 @@ void Camera::setView(sf::View view)
 	p_window->setView(view);
 }
 
+void Camera::setViewDefault()
+{
+	p_window->setView(p_window->getDefaultView());
+}
+
 Camera::~Camera()
 {
 

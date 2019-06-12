@@ -1,11 +1,16 @@
 #pragma once
 
+#include "Zymon.h"
 #include <string>
+#include "../Util/Random.h"
 
-class Move
+struct Move
 {
 public:
-	Move();
+	Move() {};
+	Move(int typepass, int PPpass, const std::string namepass, int powerpass, int accuracypass);
+
+	int useMove(int Type1, int Type2);
 
 	int power;
 	int accuracy;
@@ -16,7 +21,4 @@ public:
 	std::string name;
 
 	~Move();
-private:
-
 };
-

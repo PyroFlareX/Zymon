@@ -40,11 +40,8 @@ World::World()
 	}
 
 	
-
 	tiles.clear();
-	tiles.~vector();
 	tiles2.clear();
-	tiles2.~vector();
 }
 
 /*std::vector<sf::FloatRect> World::getBounds()
