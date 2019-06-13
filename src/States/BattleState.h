@@ -24,4 +24,5 @@ private:
 	sf::Font font;
 	sf::RectangleShape screen;
 	sf::Text status;
+	sf::Texture tex;
 };

@@ -9,8 +9,11 @@ BattleState::BattleState()
 	
 	//Starting Battle UI		@TODO !!
 	font.loadFromFile("res/Fonts/PixelFont.ttf");
+	tex.loadFromFile("res/Textures/battlebackground.jpg");
+
 	msg.setFont(font);
 	msg.setFillColor(sf::Color::Red);
+	msg.setOutlineColor(sf::Color::White);
 	msg.setCharacterSize(18);
 	msg.setPosition(sf::Vector2f(575, 475));
 	msg.setString("1: Move 1\n2: Move 2\n3: Move 3\n4: Move 4");
@@ -19,8 +22,9 @@ BattleState::BattleState()
 	status.setFillColor(sf::Color::Black);
 	status.setCharacterSize(18);
 	status.setString("Default");
+	status.setOutlineColor(sf::Color::White);
 
-	screen.setFillColor(sf::Color::Green);
+	screen.setTexture(&tex);
 	screen.setSize(sf::Vector2f(800, 600));
 }
 
