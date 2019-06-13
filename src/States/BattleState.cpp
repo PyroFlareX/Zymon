@@ -56,14 +56,14 @@ bool BattleState::input(Application &app)
 	{
 		std::cout << "Move 1\n";
 		status.setString("Used Move 1!");
-		//battle.getSelections(/*@TODO: Create DEMO MOVES*/)
+		/*@TODO: Create DEMO MOVES*/
 		battle.getSelections(Move(Types::NORMAL, 40, "Tackle", 40, 100));
 	}
 	if (input.backwards)
 	{
 		std::cout << "Move 3\n";
 		status.setString("Used Move 3!");
-		//battle.getSelections(/*@TODO: Create DEMO MOVES*/)
+		/*@TODO: Create DEMO MOVES*/
 		battle.getSelections(Move(Types::NORMAL, 40, "Tackle", 40, 100));
 	}
 	if (battle.checkEnd())
