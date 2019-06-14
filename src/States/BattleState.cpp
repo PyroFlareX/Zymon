@@ -14,6 +14,7 @@ BattleState::BattleState()
 	msg.setFont(font);
 	msg.setFillColor(sf::Color::Red);
 	msg.setOutlineColor(sf::Color::White);
+	msg.setOutlineThickness(4);
 	msg.setCharacterSize(18);
 	msg.setPosition(sf::Vector2f(575, 475));
 	msg.setString("1: Move 1\n2: Move 2\n3: Move 3\n4: Move 4");
@@ -23,6 +24,7 @@ BattleState::BattleState()
 	status.setCharacterSize(18);
 	status.setString("Default");
 	status.setOutlineColor(sf::Color::White);
+	status.setOutlineThickness(4);
 
 	screen.setTexture(&tex);
 	screen.setSize(sf::Vector2f(800, 600));
