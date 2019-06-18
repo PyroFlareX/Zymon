@@ -137,5 +137,6 @@ bool GameState::isColliding(sf::Vector2f playerPos)
 		m_player.Character.setPosition(playerPos);
 		return true;
 	}
+	// @TODO : Add Other Collisions
 	return false;
 }

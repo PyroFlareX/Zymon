@@ -4,7 +4,7 @@
 
 BattleState::BattleState()
 {
-
+	firstFrame = true;
 	//Play Battle Video
 	
 	//Starting Battle UI		@TODO !!
@@ -39,7 +39,7 @@ bool BattleState::input(Application &app)
 	{
 		std::cout << "Move 4\n";
 		status.setString("Used Move 4!");
-		//battle.getSelections(/*@TODO: Create DEMO MOVES*/)
+		// /*@TODO: Create DEMO MOVES*/
 		battle.getSelections(Move(Types::NORMAL, 40, "Tackle", 40, 100));
 		status.setString("Used Tackle!");
 	}
@@ -47,7 +47,7 @@ bool BattleState::input(Application &app)
 	{
 		std::cout << "Move 2\n";
 		status.setString("Used Move 2!");
-		//battle.getSelections(/*@TODO: Create DEMO MOVES*/)
+		// /*@TODO: Create DEMO MOVES*/
 		battle.getSelections(Move(Types::NORMAL, 40, "Tackle", 40, 100)); 
 	}
 	if (input.up)
@@ -93,7 +93,11 @@ void BattleState::update(sf::RenderWindow* window, float dt)
 
 void BattleState::lateUpdate(Camera* cam)
 {
-	cam->setViewDefault();
+	if (firstFrame)
+	{
+		cam->setViewDefault();
+		firstFrame = false;
+	}
 }
 
 void BattleState::render(Renderer* render)

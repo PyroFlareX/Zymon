@@ -25,4 +25,5 @@ private:
 	sf::RectangleShape screen;
 	sf::Text status;
 	sf::Texture tex;
+	bool firstFrame;
 };
